@@ -42,4 +42,8 @@ describe('numberToRoman', function(){
     expect(numberToRoman(90)).to.equal("XC");
   })
 
+  it("will return XCIX for 99", function(){
+    expect(numberToRoman(99)).to.equal("XCIX");
+  })
+
 });

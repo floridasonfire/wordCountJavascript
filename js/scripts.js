@@ -38,15 +38,15 @@ var numberToRoman = function(number){
 
       else if (number / 50 >= 1) {
         var timesDivisibleBy = Math.floor(number/50)
-        if (number === 90) {
+        if (100 - number <= 10 ) {
           finalArray.push("XC")
           number = number - 90;
         } else {
           for(var i=0; i<timesDivisibleBy; i++) {
             finalArray.push("L");
           }
+          number = number - (50*timesDivisibleBy)
         }
-        number = number - (50*timesDivisibleBy)
       }
 
 
