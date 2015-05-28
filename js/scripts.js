@@ -24,8 +24,12 @@ var numberToRoman = function(number){
 
       else if (number / 100 >= 1) {
         var timesDivisibleBy = Math.floor(number/100)
+        if (timesDivisibleBy >3) {
+          finalArray.push("CD")
+        } else {
           for(var i=0; i<timesDivisibleBy; i++) {
           finalArray.push("C");
+          }
         }
         number = number - (100*timesDivisibleBy)
 
@@ -34,8 +38,13 @@ var numberToRoman = function(number){
 
       else if (number / 50 >= 1) {
         var timesDivisibleBy = Math.floor(number/50)
-        for(var i=0; i<timesDivisibleBy; i++) {
-          finalArray.push("L");
+        if (number === 90) {
+          finalArray.push("XC")
+          number = number - 90;
+        } else {
+          for(var i=0; i<timesDivisibleBy; i++) {
+            finalArray.push("L");
+          }
         }
         number = number - (50*timesDivisibleBy)
       }
@@ -43,31 +52,39 @@ var numberToRoman = function(number){
 
       else if (number / 10 >= 1) {
         var timesDivisibleBy = Math.floor(number/10)
-        for(var i=0; i<timesDivisibleBy; i++) {
-          finalArray.push("X");
+        if (timesDivisibleBy >3) {
+          finalArray.push("XL")
+        } else {
+          for(var i=0; i<timesDivisibleBy; i++) {
+            finalArray.push("X");
+          }
         }
         number = number - (10*timesDivisibleBy)
       }
 
+
       else if (number / 5 >= 1) {
         var timesDivisibleBy = Math.floor(number/5)
+        if (number === 9) {
+          finalArray.push("IX")
+          number = number - 9;
+        } else {
         for(var i=0; i<timesDivisibleBy; i++) {
           finalArray.push("V");
         }
+      }
         number = number - (5*timesDivisibleBy)
       }
-
-      else if (number % 4 === 0) {
-        finalArray.push("IV");
-        number = number - 4;
-      }
-
 
       // ONES
       else if (number / 1 >= 1) {
         var timesDivisibleBy = Math.floor(number/1)
-        for(var i=0; i<timesDivisibleBy; i++) {
-          finalArray.push("I");
+        if (timesDivisibleBy >3) {
+          finalArray.push("IV")
+        } else {
+          for(var i=0; i<timesDivisibleBy; i++) {
+            finalArray.push("I");
+          }
         }
         number = number - (1*timesDivisibleBy)
 

@@ -10,6 +10,14 @@ describe('numberToRoman', function(){
     expect(numberToRoman(4)).to.equal("IV");
   })
 
+  it("will return IX for 9", function(){
+    expect(numberToRoman(9)).to.equal("IX");
+  })
+
+  it("will return XL for 40", function(){
+    expect(numberToRoman(40)).to.equal("XL");
+  })
+
   it("will return M for 1000", function(){
     expect(numberToRoman(1000)).to.equal("M");
   })
