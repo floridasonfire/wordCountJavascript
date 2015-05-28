@@ -4,16 +4,6 @@ var numberToRoman = function(number){
   var finalArray = []
 
 
-    var ones = []
-    var tens = []
-    var counter = 0;
-
-
-
-
-
-
-
     while (number > 0) {
       if (number / 1000 >= 1){
         var timesDivisibleBy = Math.floor(number/1000)
@@ -34,10 +24,11 @@ var numberToRoman = function(number){
 
       else if (number / 100 >= 1) {
         var timesDivisibleBy = Math.floor(number/100)
-        for(var i=0; i<timesDivisibleBy; i++) {
+          for(var i=0; i<timesDivisibleBy; i++) {
           finalArray.push("C");
         }
         number = number - (100*timesDivisibleBy)
+
       }
 
 
@@ -66,15 +57,26 @@ var numberToRoman = function(number){
         number = number - (5*timesDivisibleBy)
       }
 
+      else if (number % 4 === 0) {
+        finalArray.push("IV");
+        number = number - 4;
+      }
+
+
+      // ONES
       else if (number / 1 >= 1) {
         var timesDivisibleBy = Math.floor(number/1)
         for(var i=0; i<timesDivisibleBy; i++) {
           finalArray.push("I");
         }
         number = number - (1*timesDivisibleBy)
+
       }
 
 
+
+
+// CLOSING WHILE LOOP
     }
 
 
