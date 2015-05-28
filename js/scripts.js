@@ -24,6 +24,16 @@ var wordCount = function(string) {
   return wordHash;
 }
 
+// var sortHash = function(string) {
+//   var wordHash = wordCount(string);
+//   var wordArray = []
+//
+//   wordHash.forEach(function(element){
+//     wordArray.push(element);
+//
+//   })
+// }
+
 $(document).ready(function(){
 
   $("#string-form").submit(function(event){

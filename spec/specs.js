@@ -23,3 +23,9 @@ describe('wordCount', function(){
 
 
 });
+// 
+// describe('sortHash', function(){
+//   it("will return array of hashes", function(){
+//     expect(sortHash({"word": 2, "cat": 1})).to.eql([{"word":2}, {"cat":1}]);
+//   });
+// });
