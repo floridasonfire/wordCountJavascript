@@ -17,7 +17,7 @@ var numberToRoman = function(number){
       else if (number / 500 >= 1) {
         var timesDivisibleBy = Math.floor(number/500)
         if (1000 - number <= 100) {
-          finalArray.push("XM")
+          finalArray.push("CM")
           number = number - 900;
         } else {
             for(var i=0; i<timesDivisibleBy; i++) {

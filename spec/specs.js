@@ -18,7 +18,7 @@ describe('numberToRoman', function(){
     expect(numberToRoman(40)).to.equal("XL");
   })
 
-  it("will return XL for 40", function(){
+  it("will return XLIV for 44", function(){
     expect(numberToRoman(44)).to.equal("XLIV");
   })
 
@@ -50,6 +50,10 @@ describe('numberToRoman', function(){
     expect(numberToRoman(1000)).to.equal("M");
   })
 
+  it("will return MCDXCIII for 1493", function(){
+    expect(numberToRoman(1493)).to.equal("MCDXCIII");
+  })
+
   it("will return MD for 1500", function(){
     expect(numberToRoman(1500)).to.equal("MD");
   })
@@ -58,13 +62,20 @@ describe('numberToRoman', function(){
     expect(numberToRoman(1533)).to.equal("MDXXXIII");
   })
 
-  it("will return MXMIX for 1909", function(){
-    expect(numberToRoman(1909)).to.equal("MXMIX");
+  it("will return MCMIX for 1909", function(){
+    expect(numberToRoman(1909)).to.equal("MCMIX");
   })
 
   it("will return MM for 2000", function(){
     expect(numberToRoman(2000)).to.equal("MM");
   })
 
+  it("will return MMMCMIX for 3909", function(){
+    expect(numberToRoman(3909)).to.equal("MMMCMIX");
+  })
+
+  it("will return MMMCMXCIX for 3999", function(){
+    expect(numberToRoman(3999)).to.equal("MMMCMXCIX");
+  })
 
 });
