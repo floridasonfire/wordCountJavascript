@@ -18,12 +18,36 @@ describe('numberToRoman', function(){
     expect(numberToRoman(40)).to.equal("XL");
   })
 
-  it("will return M for 1000", function(){
-    expect(numberToRoman(1000)).to.equal("M");
+  it("will return XL for 40", function(){
+    expect(numberToRoman(44)).to.equal("XLIV");
   })
 
-  it("will return MM for 2000", function(){
-    expect(numberToRoman(2000)).to.equal("MM");
+  it("will return XL for 67", function(){
+    expect(numberToRoman(67)).to.equal("LXVII");
+  })
+
+  it("will return XC for 90", function(){
+    expect(numberToRoman(90)).to.equal("XC");
+  })
+
+  it("will return XCIX for 99", function(){
+    expect(numberToRoman(99)).to.equal("XCIX");
+  })
+
+  it("will return CD for 400", function(){
+    expect(numberToRoman(400)).to.equal("CD");
+  })
+
+  it("will return CDXC for 490", function(){
+    expect(numberToRoman(490)).to.equal("CDXC");
+  })
+
+  it("will return CDXCIX for 499", function(){
+    expect(numberToRoman(499)).to.equal("CDXCIX");
+  })
+
+  it("will return M for 1000", function(){
+    expect(numberToRoman(1000)).to.equal("M");
   })
 
   it("will return MD for 1500", function(){
@@ -34,16 +58,13 @@ describe('numberToRoman', function(){
     expect(numberToRoman(1533)).to.equal("MDXXXIII");
   })
 
-  it("will return CD for 400", function(){
-    expect(numberToRoman(400)).to.equal("CD");
+  it("will return MXMIX for 1909", function(){
+    expect(numberToRoman(1909)).to.equal("MXMIX");
   })
 
-  it("will return XC for 90", function(){
-    expect(numberToRoman(90)).to.equal("XC");
+  it("will return MM for 2000", function(){
+    expect(numberToRoman(2000)).to.equal("MM");
   })
 
-  it("will return XCIX for 99", function(){
-    expect(numberToRoman(99)).to.equal("XCIX");
-  })
 
 });

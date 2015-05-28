@@ -16,10 +16,15 @@ var numberToRoman = function(number){
 
       else if (number / 500 >= 1) {
         var timesDivisibleBy = Math.floor(number/500)
-        for(var i=0; i<timesDivisibleBy; i++) {
-          finalArray.push("D");
+        if (1000 - number <= 100) {
+          finalArray.push("XM")
+          number = number - 900;
+        } else {
+            for(var i=0; i<timesDivisibleBy; i++) {
+              finalArray.push("D");
+            }
+          number = number - (500*timesDivisibleBy)
         }
-        number = number - (500*timesDivisibleBy)
       }
 
       else if (number / 100 >= 1) {
