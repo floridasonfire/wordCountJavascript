@@ -1,17 +1,37 @@
-describe('countBy', function(){
-  it("counts by 1 up to a given number", function(){
-    expect(countBy(1, 5)).to.eql([1,2,3,4,5]);
+describe('numberToRoman', function(){
+  it("will return I for 1", function(){
+    expect(numberToRoman(1)).to.equal("I")
   });
+  it("will return V for 5", function(){
+    expect(numberToRoman(5)).to.equal("V");
+  })
 
-  it("returns null if count up number is 0", function(){
-    expect(countBy(0, 50000000)).to.eql(null);
-  });
+  it("will return IV for 4", function(){
+    expect(numberToRoman(4)).to.equal("IV");
+  })
 
-  it("counts up by number larger than 1 to given number", function(){
-    expect(countBy(5, 30)).to.eql([5, 10, 15, 20, 25, 30]);
-  });
+  // it("will return M for 1000", function(){
+  //   expect(numberToRoman(1000)).to.equal("M");
+  // })
+  //
+  // it("will return MM for 2000", function(){
+  //   expect(numberToRoman(2000)).to.equal("MM");
+  // })
+  //
+  // it("will return MD for 1500", function(){
+  //   expect(numberToRoman(1500)).to.equal("MD");
+  // })
+  //
+  // it("will return MDXXXIII for 1533", function(){
+  //   expect(numberToRoman(1533)).to.equal("MDXXXIII");
+  // })
+  //
+  // it("will return CD for 400", function(){
+  //   expect(numberToRoman(400)).to.equal("CD");
+  // })
+  //
+  it("will return XC for 90", function(){
+    expect(numberToRoman(90)).to.equal("XC");
+  })
 
-  it("counts up by number larger than 1 to given number, even if number does not go in even", function(){
-    expect(countBy(7, 50)).to.eql([7, 14, 21, 28, 35, 42, 49]);
-  });
 });
